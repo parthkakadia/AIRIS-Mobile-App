@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Airis</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_news">News Viewer</string>
+    <string name="title_activity_register">Register User</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Home</string>
+    <string name="aqigood">Good</string>
+    <string name="goodinfo">Minimal impact.\n\nWhen the air quality index is below 50, people are breathing fresh, clean air. People are no longer exposed to any health risk because the quality of air is pure.</string>
+    <string name="aqisatisfactory">Satisfactory</string>
+    <string name="satisfactoryinfo">May cause minor breathing discomfort to sensitive people.\n\nAQI level between 51-100 signifies an acceptable air quality for a healthy adult but may still pose a threat to a sensitive individual.</string>
+    <string name="aqimoderate">Moderate</string>
+    <string name="moderateinfo">May cause breathing discomfort to the people with lung disease such as asthma and discomfort to people with heart disease, children and older adults.\n\nWith AQI levels between 101-200, the poor air quality can affect people’s health and cause discomfort to people with heart diseases.</string>
+    <string name="aqipoor">Poor</string>
+    <string name="poorinfo">May cause breathing discomfort to the people on prolonged exposure and discomfort to people with heart disease.\n\nAQI level between 201-300 is a result to your constant health issues. Breathing unhealthy air causes various respiratory illness such as feeling nauseous, running temperature, cough and cold, etcetera.</string>
+    <string name="aqiunhealthy">Unhealthy</string>
+    <string name="unhealthyinfo">May cause respiratory illness to the people on prolonged exposure. Effect may be more pronounced in people with lung and heart disease.\n\nWith AQI levels reaching between 301-400 which is very dangerous level, the deadly air pollutants are making their way in your lungs causing you severe discomfort and health issues.</string>
+    <string name="aqihazardous">Hazardous</string>
+    <string name="hazardousinfo">May cause respiratory effects even on healthy people and serious health impacts on people with lung and heart diseases. The health impacts may be experienced even during light physical activity.\n\nAQI level exceeding 401+ is highly unacceptable to the health. Lung cancer, chronic obstructive pulmonary disease, and emphysema are a few chronic health conditions caused by breathing poisonous air.</string>
+</resources>

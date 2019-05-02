@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/address"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/colorText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/citybox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:textColor="@color/colorText"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/address"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:id="@+id/anim"
+            android:layout_width="150dp"
+            android:layout_height="165dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="end"
+            android:contentDescription="Animated Graphic for AQI"
+            app:layout_constraintBottom_toTopOf="@id/updatetime"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/citybox"
+            app:layout_constraintTop_toBottomOf="@id/address" />
+
+        <TextView
+            android:id="@+id/aqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/citybox"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="60sp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/colorText"/>
+
+        <TextView
+            android:id="@+id/aqitext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:textColor="@color/colorText"
+            app:layout_constraintTop_toBottomOf="@id/aqi"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/updatetime"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorText"
+            app:layout_constraintTop_toBottomOf="@+id/aqitext" />
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/border"
+            android:textColor="@color/colorText"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/updatetime"
+            app:layout_constraintRight_toLeftOf="@id/humid"/>
+
+        <TextView
+            android:id="@+id/humid"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorText"
+            android:textAlignment="center"
+            android:background="@drawable/border"
+            android:textSize="25sp"
+            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintLeft_toRightOf="@id/temp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/updatetime" />
+
+        <TextView
+            android:id="@+id/co_gas"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorText"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/temp"
+            app:layout_constraintRight_toLeftOf="@id/pm2510"/>
+
+        <TextView
+            android:id="@+id/pm2510"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="25sp"
+            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintLeft_toRightOf="@id/co_gas"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/humid"/>
+
+    <TextView
+        android:id="@+id/predict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="25sp"
+        android:text="AQI Visualisation"
+        android:background="@null"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/co_gas"/>
+
+    <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toBottomOf="@+id/predict"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/graph"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
+
+<!--<ImageButton
+            android:id="@+id/legendbtn"
+            android:src="@drawable/info_twotone_24px"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="AQI Levels"
+            app:layout_constraintTop_toBottomOf="@id/aqi"
+            app:layout_constraintLeft_toRightOf="@id/aqitext"/>
+
+            <ImageView
+            android:id="@+id/aqichart"
+            android:layout_width="370dp"
+            android:layout_height="250dp"
+            android:contentDescription="Air Quality Indexes for India"
+            android:src="@drawable/aqichart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/updatetime"/>-->

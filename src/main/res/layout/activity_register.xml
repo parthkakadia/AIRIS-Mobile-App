@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/gradientbackground"
+    tools:context=".RegisterUser">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:textSize="30sp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="100sp"
+        android:paddingLeft="30sp"
+        android:text="Enable Airis"
+        />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_marginTop="20sp"
+        android:inputType="text"
+        android:hint="Your Name"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="270sp" />
+
+    <EditText
+        android:id="@+id/newuser"
+        android:layout_marginTop="20sp"
+        android:inputType="textEmailAddress"
+        android:hint="Username/Email"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="270sp" />
+
+    <EditText
+        android:id="@+id/newpassword"
+        android:layout_marginTop="20sp"
+        android:hint="New Password"
+        android:textColor="@color/colorPrimaryDark"
+        android:inputType="textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="270sp"/>
+
+    <EditText
+        android:id="@+id/conpassword"
+        android:layout_marginTop="20sp"
+        android:hint="Confirm Password"
+        android:textColor="@color/colorPrimaryDark"
+        android:inputType="textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="270sp"/>
+
+    <Button
+        android:id="@+id/registerbtn"
+        android:layout_marginTop="30sp"
+        style="@style/CustomBtn"
+        android:text="Create now"
+        />
+    <TextView
+        android:id="@+id/loginlink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Already a member? Login here"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAlignment="center"
+        android:paddingRight="10dp"
+        android:layout_marginTop="20sp"
+        android:textSize="15sp"
+        />
+
+</LinearLayout>

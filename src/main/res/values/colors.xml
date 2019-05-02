@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffff99</color>
+    <color name="colorPrimaryDark">#53090e</color>
+    <color name="colorAccent">#53090e</color>
+    <color name="colorText">#FFFFFF</color>
+    <color name="colorSecondaryText">#000000</color>
+    <color name="aqigood">#28CC28</color>
+    <color name="aqisatisfactory">#D2D219</color>
+    <color name="aqimoderate">#ED6A0C</color>
+    <color name="aqipoor">#DE4ADB</color>
+    <color name="aqiunhealthy">#7D1DD6</color>
+    <color name="aqihazardous">#A31919</color>
+</resources>

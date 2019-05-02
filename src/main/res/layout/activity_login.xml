@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/gradientbackground"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/splashlogo"
+        android:src="@drawable/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50sp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_marginTop="20sp"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="270sp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_marginTop="20sp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:width="270sp"/>
+
+    <Button
+        android:id="@+id/signinbtn"
+        style="@style/CustomBtn"
+        android:layout_marginTop="30sp"
+        android:text="Sign In" />
+
+    <TextView
+        android:id="@+id/resetpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Reset password?"
+        android:layout_marginTop="10sp"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/registerlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="No account yet? Create now!"
+        android:layout_marginTop="20sp"
+        android:textSize="15sp"
+        />
+
+</LinearLayout>
