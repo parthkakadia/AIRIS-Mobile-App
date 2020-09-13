@@ -6,41 +6,22 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.ValueDependentColor;
 import com.jjoe64.graphview.helper.StaticLabelsFormatter;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
-import com.mongodb.stitch.android.services.mongodb.remote.RemoteMongoClient;
-import com.mongodb.stitch.android.services.mongodb.remote.RemoteMongoDatabase;
 import com.squareup.picasso.Picasso;
-
-import org.bson.Document;
-
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
+
+import androidx.fragment.app.Fragment;
 
 public class DashFragment extends Fragment {
     private TextView address, updateTime, cityBox, aqi, aqiText, temp, humid, colevel, pmlevel;
@@ -87,23 +68,23 @@ public class DashFragment extends Fragment {
 
             if(aqindex<=50) {
                 Picasso.with(getContext()).load(Uri.parse("IMAGE_RESOURCE_LINK")).into(aqiAnim);aqiText.setText(R.string.aqigood);
-                view.setBackgroundColor(getContext().getColor(R.color.aqigood));
+                view.setBackgroundColor(getResources().getColor(R.color.aqigood));
             }else if(aqindex>50 && aqindex <=100) {
                 Picasso.with(getContext()).load(Uri.parse("IMAGE_RESOURCE_LINK")).into(aqiAnim);aqiText.setText(R.string.aqisatisfactory);
-                view.setBackgroundColor(getContext().getColor(R.color.aqisatisfactory));
+                view.setBackgroundColor(getResources().getColor(R.color.aqisatisfactory));
             }else if(aqindex>100 && aqindex <=200){
                 Picasso.with(getContext()).load(Uri.parse("IMAGE_RESOURCE_LINK")).into(aqiAnim);aqiText.setText(R.string.aqimoderate);
-                view.setBackgroundColor(getContext().getColor(R.color.aqimoderate));
+                view.setBackgroundColor(getResources().getColor(R.color.aqimoderate));
             }else if(aqindex>200 && aqindex <=300) {
                 Picasso.with(getContext()).load(Uri.parse("IMAGE_RESOURCE_LINK")).into(aqiAnim);aqiText.setText(R.string.aqipoor);
-                view.setBackgroundColor(getContext().getColor(R.color.aqipoor));
+                view.setBackgroundColor(getResources().getColor(R.color.aqipoor));
             }else if(aqindex>300 && aqindex <=400) {
                 Picasso.with(getContext()).load(Uri.parse("IMAGE_RESOURCE_LINK")).into(aqiAnim);aqiText.setText(R.string.aqiunhealthy);
-                view.setBackgroundColor(getContext().getColor(R.color.aqiunhealthy));
+                view.setBackgroundColor(getResources().getColor(R.color.aqiunhealthy));
             }else if(aqindex>400) {
                 Picasso.with(getContext()).load(Uri.parse("IMAGE_RESOURCE_LINK")).into(aqiAnim);
                 aqiText.setText(R.string.aqihazardous);
-                view.setBackgroundColor(getContext().getColor(R.color.aqihazardous));
+                view.setBackgroundColor(getResources().getColor(R.color.aqihazardous));
             }else
                 aqiText.setText("Not Valid");
         }else {

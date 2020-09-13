@@ -1,14 +1,13 @@
 package project.airved;
 
-import android.app.AppComponentFactory;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailedNews extends AppCompatActivity {
     WebView webView;
